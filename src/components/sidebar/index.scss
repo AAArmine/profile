@@ -1,0 +1,77 @@
+.nav {
+  background-attachment: #181818;
+  width: 80px;
+  height: 100%;
+  top: 0;
+  z-index: 3;
+  min-height: 500px;
+  .logo {
+    display: block;
+    padding: 8px 0;
+    img {
+      width: 100px;
+      margin: 30px;
+      //   width: 24px;
+      border-radius: 5px;
+    }
+  }
+  nav {
+    display: block;
+    text-align: center;
+    position: relative;
+    height: 210px;
+    top: 50%;
+    margin-top: -120;
+    width: 100%;
+    a {
+      font-size: 16px;
+      position: relative;
+      text-decoration: none;
+      transition: all 0.3s ease-out;
+      display: block;
+      color: #8791af;
+      min-height: 50px;
+      &:hover {
+        // color: #8110a2;
+        svg {
+          opacity: 0;
+        }
+        &:after {
+          opacity: 1;
+        }
+      }
+      &:after {
+        content: '';
+        font-size: 9px;
+        letter-spacing: 2px;
+        position: absolute;
+        bottom: 60%;
+        width: 100%;
+        text-align: center;
+        transition: all 0.3s ease-out;
+        opacity: 0;
+        left: 0;
+      }
+      &:first-child {
+        &:after {
+          content: 'HOME';
+        }
+      }
+    }
+    a.about-link {
+      &:after {
+        content: 'ABOUT';
+      }
+    }
+    a.contact-link {
+      &:after {
+        content: 'CONTACT';
+      }
+    }
+  }
+  [aria-current='page'] {
+    svg {
+      color: #5c0e80;
+    }
+  }
+}

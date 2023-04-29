@@ -1,8 +1,8 @@
-$primary-color: #ffd700;
-$primary: #ccd6f6;
-$secondary: #8791af;
-$alternative: #5c0e80;
-
+$primary-bg: #1d1d1d;
+$primary: #dce2f5;
+$secondary: #a094e0;
+$alternative: #24c4ae;
+$contrast: rgb(235, 15, 52);
 @import 'animate.css';
 // @import '~loaders.css/src/animations/pacman.scss';
 
@@ -33,7 +33,30 @@ input,
 textarea {
   font-family: 'Helvetica Neue', sans-serif;
 }
-
+.tags {
+      color: $primary;
+      opacity: 0.6;
+      bottom: 0;
+      position: absolute;
+      left: 10;
+      font-size: 18px;
+      font-family: 'La Belle Aurore';
+      &.bottom-tags {
+        bottom: 50px;
+      }
+      &.top-tags {
+        bottom: auto;
+        top: 65px;
+      }
+      &.top-tag-html {
+        top: 35px;
+        margin-left: -20px;
+      }
+      &.bottom-tag-html {
+        margin-left: -20px;
+        bottom: 10px;
+      }
+    }
 // .loader-hidden {
 //   display: none;
 // }

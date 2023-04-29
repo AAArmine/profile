@@ -1,0 +1,50 @@
+@import '../../App.scss';
+.about-container {
+  // width: 80vw;
+  // height: 80vh;
+  background-image: url('../../assets/images/logo-dark1.png');
+  display: flex;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: auto;
+  font-size: 28px;
+  font-family: 'Coolvetica';
+  letter-spacing: 5px;
+  .content {
+    p {
+      color: $contrast;
+      font-weight: 300;
+      font-family: 'Coolvetica';
+      letter-spacing: 2px;
+    }
+  }
+  .image {
+    width: 210px;
+    height: 260px;
+    border-radius: 20px;
+    border: 1px solid $alternative;
+    margin-top: 50px;
+    margin-left: 50px;
+    position: relative;
+    transition: all 0.3s ease;
+    .img-cont {
+      position: absolute;
+      top: -15px;
+      left: -15px;
+      transition: all 0.5s ease;
+      &:hover {
+        top: 0px;
+        left: 0px;
+      }
+      img {
+        width: 210px;
+        height: 260px;
+        border-radius: 20px;
+        filter: opacity(0.5);
+        &:hover {
+          filter: opacity(1);
+        }
+      }
+    }
+  }
+}

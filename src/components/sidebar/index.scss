@@ -1,38 +1,30 @@
+@import '../../App.scss';
 .nav {
-  background-attachment: #181818;
   width: 80px;
   height: 100%;
   top: 0;
   z-index: 3;
-  min-height: 500px;
+  height: 100vh;
   .logo {
     display: block;
     padding: 8px 0;
     img {
-      width: 100px;
-      margin: 30px;
-      //   width: 24px;
-      border-radius: 5px;
+      width: 75px;
+      padding: 20px 5px;
+      // opacity: 0.5;
     }
   }
   nav {
-    display: block;
-    text-align: center;
     position: relative;
-    height: 210px;
-    top: 50%;
-    margin-top: -120;
-    width: 100%;
+    left: 30px;
     a {
       font-size: 16px;
       position: relative;
       text-decoration: none;
       transition: all 0.3s ease-out;
       display: block;
-      color: #8791af;
       min-height: 50px;
       &:hover {
-        // color: #8110a2;
         svg {
           opacity: 0;
         }
@@ -50,17 +42,18 @@
         text-align: center;
         transition: all 0.3s ease-out;
         opacity: 0;
-        left: 0;
+        left: -30px;
+        color: $primary;
       }
       &:first-child {
         &:after {
-          content: 'HOME';
+          content: 'ABOUT';
         }
       }
     }
-    a.about-link {
+    a.skills-link {
       &:after {
-        content: 'ABOUT';
+        content: 'SKILLS';
       }
     }
     a.contact-link {
@@ -68,10 +61,57 @@
         content: 'CONTACT';
       }
     }
+    a.work-link {
+      &:after {
+        content: 'WORK';
+      }
+    }
   }
   [aria-current='page'] {
     svg {
-      color: #5c0e80;
+      color: $alternative;
+    }
+    &:after {
+      color: $alternative;
+    }
+  }
+  ul {
+    margin-top: 50px;
+    list-style-type: none;
+    padding-left: 0;
+    position: fixed;
+    bottom: 0px;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    li {
+      position: relative;
+      left: 30px;
+      &:not(:nth-last-child(2)) {
+        min-height: 50px;
+      }
+      a {
+        font-size: 20px;
+        position: relative;
+        text-decoration: none;
+        transition: all 0.3s ease-out;
+        display: block;
+        svg {
+          color: $primary;
+          transition: transform 0.5s ease;
+
+          &:hover {
+            color: $alternative;
+            transform: scale(1.2, 1.2);
+          }
+        }
+      }
+      .line {
+        width: 1px;
+        height: 100px;
+        background-color: $primary;
+        position: relative;
+        left: 6px;
+      }
     }
   }
 }

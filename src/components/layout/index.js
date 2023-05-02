@@ -40,7 +40,7 @@ const Layout = () => {
       <div className="animate-cont">
         <div className="animate">Open</div>
       </div>
-      <div className="custom-btn">
+      <div className="custom-btn btn-layout">
         <FontAwesomeIcon icon={faArrowRight} />
         <a href={Pdf} target="_blank" rel="noreferrer">
           <button>Resume</button>

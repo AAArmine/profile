@@ -1,0 +1,26 @@
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  .form-container {
+    width: 48%;
+    padding-left: 100px;
+    h1 {
+      font-size: 30px;
+    }
+    .left {
+      position: relative;
+      left: -45px;
+    }
+
+    span.left-rel {
+      position: relative;
+      left: -40px;
+      top: -10px;
+    }
+  }
+  .map-container {
+    width: 48%;
+  }
+}

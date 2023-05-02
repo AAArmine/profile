@@ -55,7 +55,23 @@
       top: -15px;
       left: -15px;
       transition: all 0.5s ease;
+      background-color: rgba(127, 255, 212, 0.473);
+      height: 260px;
+      cursor: pointer;
+      &:after {
+        content: '';
+      }
       &:hover {
+        &:after {
+          content: 'Projects';
+          position: absolute;
+          left: 35px;
+          top: 105px;
+          font-size: 22px;
+          color: $alternative;
+          background-color: rgba(240, 255, 255, 0.329);
+          padding: 10px 20px;
+        }
         top: 0px;
         left: 0px;
       }
@@ -69,5 +85,21 @@
         }
       }
     }
+  }
+}
+.btn-contact {
+  animation: fadeIn ease-in 1;
+  animation-fill-mode: forwards;
+  animation-duration: 2s;
+  a {
+    color: $alternative;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }

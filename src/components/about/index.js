@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react';
-import MyPhoto from '../../assets/images/_animatedA.jpg';
+import MyPhoto from '../../assets/images/pic.gif';
 import AnimatedLetters from '../animatedLetters';
-
+import { Link } from 'react-router-dom';
 import './index.scss';
+
 const About = () => {
   const [letterClass, setLetterClass] = useState('text-animate');
   const nameArray = ["I'", 'm', ' ', 'A', 'r', 'm', 'i', 'n', 'e'];
@@ -70,12 +71,17 @@ const About = () => {
             <span className="page-tags">&lt;p/&gt;</span>
           </span>
         </p>
-      </div>
-      <div className="image">
-        <div className="img-cont">
-          <img src={MyPhoto} alt="animated" />
+        <div className="btn-contact">
+          <Link to="/contact">Say Hello!</Link>
         </div>
       </div>
+      <Link to="/work">
+        <div className="image">
+          <div className="img-cont">
+            <img src={MyPhoto} alt="animated" />
+          </div>
+        </div>
+      </Link>
     </div>
   );
 };

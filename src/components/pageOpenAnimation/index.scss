@@ -1,0 +1,60 @@
+@import '../../constants/colors.scss';
+.circle-cont {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Coolvetica';
+  .circle {
+    position: relative;
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .logo {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background: url('../../assets/images/logo.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      animation: colorChange 2s linear infinite;
+      @keyframes colorChange {
+        0% {
+          filter: hue-rotate(0deg) saturate(100%);
+        }
+        50% {
+          filter: hue-rotate(180deg) saturate(150%);
+        }
+        100% {
+          filter: hue-rotate(360deg) saturate(100%);
+        }
+      }
+      .text {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        font-size: 25px;
+        animation: rotateText 10s linear infinite;
+        span {
+          position: absolute;
+          left: 50%;
+          transform-origin: 0 130px;
+          top: -15%;
+        }
+      }
+      @keyframes rotateText {
+        0% {
+          transform: rotate(360deg);
+        }
+        100% {
+          transform: rotate(0deg);
+        }
+      }
+    }
+  }
+}

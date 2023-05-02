@@ -1,8 +1,4 @@
-$primary-bg: #1d1d1d;
-$primary: #dce2f5;
-$secondary: #a094e0;
-$alternative: #24c4ae;
-$contrast: rgb(235, 15, 52);
+@import './constants/colors.scss';
 @import 'animate.css';
 // @import '~loaders.css/src/animations/pacman.scss';
 
@@ -33,30 +29,76 @@ input,
 textarea {
   font-family: 'Helvetica Neue', sans-serif;
 }
+.page-tags,
 .tags {
-      color: $primary;
-      opacity: 0.6;
-      bottom: 0;
-      position: absolute;
-      left: 10;
-      font-size: 18px;
-      font-family: 'La Belle Aurore';
-      &.bottom-tags {
-        bottom: 50px;
-      }
-      &.top-tags {
-        bottom: auto;
-        top: 65px;
-      }
-      &.top-tag-html {
-        top: 35px;
-        margin-left: -20px;
-      }
-      &.bottom-tag-html {
-        margin-left: -20px;
-        bottom: 10px;
-      }
+  color: $primary;
+  opacity: 0.2;
+  font-size: 18px;
+  font-family: 'La Belle Aurore';
+}
+.page-tags {
+  position: relative;
+}
+.tags {
+  bottom: 0;
+  position: absolute;
+  left: 10;
+  &.bottom-tags {
+    bottom: 50px;
+    margin-left: 30px;
+  }
+  &.top-tags {
+    bottom: auto;
+    top: 65px;
+    margin-left: 60px;
+  }
+  &.top-tag-html {
+    top: 35px;
+    margin-left: 40px;
+  }
+  &.bottom-tag-html {
+    bottom: 10px;
+  }
+}
+.custom-btn {
+  position: fixed;
+  top: 30px;
+  right: 50px;
+  width: 200px;
+  height: 35px;
+  border: 1px solid $alternative;
+  svg {
+    position: absolute;
+    left: -50px;
+    top: 7px;
+    color: $contrast;
+    font-weight: 700;
+    font-size: 20px;
+  }
+  button {
+    position: relative;
+    top: 7px;
+    right: 7px;
+    width: 200px;
+    height: 35px;
+    border: 1px solid #9da8b4;
+    background-color: #9da8b4;
+    color: #213232;
+    font-family: 'Coolvetica';
+    font-size: 18px;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+    font-weight: 700;
+    cursor: pointer;
+
+    &:hover {
+      top: 0;
+      right: 0;
+      background-color: $primary;
+      color: $alternative;
     }
+  }
+}
 // .loader-hidden {
 //   display: none;
 // }

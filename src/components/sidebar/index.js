@@ -1,4 +1,3 @@
-import React from 'react';
 import './index.scss';
 import { Link, NavLink } from 'react-router-dom';
 import Logo from '../../assets/images/logo.png';
@@ -22,16 +21,16 @@ const Sidebar = () => {
         <img src={Logo} alt="logo" />
       </Link>
       <nav>
-        <NavLink exact to="/">
+        <NavLink to="/">
           <FontAwesomeIcon icon={faUser} color="#ccd6f6" />
         </NavLink>
-        <NavLink exact to="/skills" className="skills-link">
+        <NavLink to="/skills" className="skills-link">
           <FontAwesomeIcon icon={faCode} color="#ccd6f6" />
         </NavLink>
-        <NavLink exact to="/work" className="work-link">
+        <NavLink to="/work" className="work-link">
           <FontAwesomeIcon icon={faBriefcase} color="#ccd6f6" />
         </NavLink>
-        <NavLink exact to="/contact" className="contact-link">
+        <NavLink to="/contact" className="contact-link">
           <FontAwesomeIcon icon={faEnvelope} color="#ccd6f6" />
         </NavLink>
       </nav>

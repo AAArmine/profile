@@ -1,6 +1,6 @@
 @import './constants/colors.scss';
 @import 'animate.css';
-// @import '~loaders.css/src/animations/pacman.scss';
+@import 'react-toastify/dist/ReactToastify.css';
 
 @font-face {
   font-family: 'Helvetica Neue';
@@ -57,11 +57,13 @@ textarea {
   &.bottom-tags {
     bottom: 50px;
     margin-left: 30px;
+    position: fixed;
   }
   &.top-tags {
     bottom: auto;
     top: 65px;
     margin-left: 60px;
+    position: fixed;
   }
   &.top-tag-html {
     top: 35px;
@@ -69,6 +71,18 @@ textarea {
   }
   &.bottom-tag-html {
     bottom: 10px;
+    position: fixed;
+  }
+}
+.toast {
+  color: $alternative;
+}
+.Toastify {
+  .Toastify__toast {
+    color: $alternative !important;
+    font-weight: 800;
+    letter-spacing: 1px;
+    height: 50px;
   }
 }
 .custom-btn {
@@ -98,10 +112,9 @@ textarea {
     transition: all 0.3s ease;
     font-weight: 700;
     cursor: pointer;
-
     &:hover {
-      top: 0px;
-      right: 0;
+      top: 0px !important;
+      right: 0px !important;
       background-color: $primary;
       color: $alternative;
     }

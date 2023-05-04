@@ -28,7 +28,7 @@
       left: -50px;
       //   top: 40px;
     }
-    
+
     // @keyframes fadeIn {
     //   0% {
     //     opacity: 0;
@@ -42,14 +42,19 @@
     width: 50%;
     margin-left: 50px;
     top: 0;
-    height: 100%;
-    margin-top: 150px;
-    margin-bottom: 150px;
-
+    height: 300px;
+    margin-top: 10%;
+    margin-bottom: 10%;
     padding-top: 7%;
     position: absolute;
     right: 0;
     overflow: hidden;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    bottom: 50%;
+    transform: translate(0%, -50%);
+    // margin-left: 50px;
     .cube-spinner {
       animation-name: spinCube;
       animation-timing-function: ease-in-out;
@@ -58,14 +63,13 @@
       transform-style: preserve-3d;
       transform-origin: 100px 100px 0;
       margin-left: calc(50% - 100px);
+
       div {
         position: absolute;
         width: 200px;
         height: 200px;
         border: 1px solid $contrast;
-        // background: rgba(255, 2555, 255, 0.4);
         background: rgba(255, 0, 0, 0.137);
-
         text-align: center;
         font-size: 100px;
         display: flex;

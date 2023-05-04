@@ -11,6 +11,7 @@
     margin-right: 10px;
   }
   .switch {
+    cursor: pointer;
     display: inline-block;
     position: relative;
     width: 60px;
@@ -94,7 +95,4 @@
   position: fixed;
   top: 30px;
   right: 50px;
-  // &:hover {
-  //     top: -5px;
-  // }
 }

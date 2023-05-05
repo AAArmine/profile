@@ -119,13 +119,13 @@
     margin: 0 50px;
     &:hover {
       .info-map {
-        background-color: rgba(255, 0, 0, 0);
+        display: none;
       }
     }
     .info-map {
       position: absolute;
-      background-color: rgba(255, 0, 0, 0.493);
-      color: #213232;
+      background-color: black;
+      color: $contrast;
       top: 50%;
       z-index: 100;
       width: 200px;
@@ -133,10 +133,11 @@
       font-size: 14px;
       // font-family: 'Courier New', Courier, monospace;
       letter-spacing: 1px;
-      animation: fadeIn ease-in 1;
+      animation: fadeIn ease-in;
       animation-fill-mode: forwards;
-      animation-duration: 2s;
+      animation-duration: 1s;
       font-weight: 300;
+      // transition: all 1s ease-in-out;
       span {
         font-size: 12px;
         display: block;
@@ -146,16 +147,27 @@
       }
     }
     .map-wrap {
-      background-color: rgba(8, 253, 216, 0.1);
+      background-color: rgba(8, 253, 216, 0.541);
       height: 100%;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      animation: backInRight 1s 1.2s;
+      animation-fill-mode: forwards;
+      // filter: brightness(120%) hue-rotate(-80deg);
+      &:hover {
+        filter: unset;
+        background-color: transparent;
+      }
+      .map-cont {
+        width: auto;
+        height: 100%;
+        opacity: 0.5;
+        transition: opacity 0.3s ease-in-out;
+        &:hover {
+          opacity: 1;
+        }
+      }
     }
   }
-}
-.leaflet-container {
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  animation: backInRight 1s 1.2s;
-  animation-fill-mode: forwards;
-  // background-color: aqua;
 }

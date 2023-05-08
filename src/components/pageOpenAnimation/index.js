@@ -1,6 +1,5 @@
-
-
 import './index.scss';
+
 const PageOpenAnimation = () => {
   const text = 'Armine Aghababyan * Front-End-Developer * ';
   const textArray = text.split('');

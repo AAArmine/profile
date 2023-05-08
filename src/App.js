@@ -1,10 +1,12 @@
 import { useState, useEffect } from 'react';
 import { Route, Routes } from 'react-router-dom';
-import Layout from './components/layout';
+import Layout from './components/custom/layout';
 import About from './components/about';
 import Skills from './components/skills';
+import Work from './components/work';
 import Contact from './components/contact';
 import PageOpenAnimation from './components/pageOpenAnimation';
+import 'antd/dist/reset.css';
 import './App.scss';
 
 function App() {
@@ -30,8 +32,10 @@ function App() {
       )}
       <Route path="/" element={<Layout />}>
         <Route path="/skills" element={<Skills />} />
-        <Route path="/work" />
         <Route path="/contact" element={<Contact />} />
+      </Route>
+      <Route path="/" element={<Layout largeContent />}>
+        <Route path="/work" element={<Work />} />
       </Route>
     </Routes>
   );

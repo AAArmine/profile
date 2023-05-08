@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { contactMe, contactText } from '../../constants';
-import AnimatedLetters from '../animatedLetters';
+import AnimatedLetters from '../custom/animatedLetters';
 import Form from './form';
 import './index.scss';
 import Map from './map';
@@ -8,7 +8,7 @@ import Map from './map';
 const Contact = () => {
   const [letterClass, setLetterClass] = useState('text-animate');
   const contactMeArray = contactMe.split('');
-  
+
   useEffect(() => {
     setTimeout(() => {
       setLetterClass('text-animate-hover');

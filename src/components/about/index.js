@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
-import MyPhoto from '../../assets/images/pic.gif';
-import AnimatedLetters from '../animatedLetters';
+import gifAnimation from '../../assets/images/pic.gif';
+import AnimatedLetters from '../custom/animatedLetters';
 import { Link } from 'react-router-dom';
 import './index.scss';
 
@@ -78,7 +78,7 @@ const About = () => {
       <Link to="/work">
         <div className="image">
           <div className="img-cont">
-            <img src={MyPhoto} alt="animated" />
+            <img src={gifAnimation} alt="animated" />
           </div>
         </div>
       </Link>

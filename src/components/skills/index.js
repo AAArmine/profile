@@ -4,7 +4,7 @@ import {
   skillsTitleSecondLine,
   skillsParagraph,
 } from '../../constants';
-import AnimatedLetters from '../animatedLetters';
+import AnimatedLetters from '../custom/animatedLetters';
 import './index.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {

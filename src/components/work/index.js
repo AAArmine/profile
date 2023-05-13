@@ -5,7 +5,6 @@ import { projectList } from '../../constants/projectList';
 import Project from './project';
 import './index.scss';
 
-
 const Work = () => {
   const [letterClass, setLetterClass] = useState('text-animate');
   const workTitleTopArr = workTitleTop.split('');
@@ -44,14 +43,7 @@ const Work = () => {
           ></AnimatedLetters>
         </h2>
         {projectList.map((project) => (
-          <Project
-            // key={project.id}
-            // id={project.id}
-            // logo={project.logo}
-            // technologies={project.technologies}
-            project={project}
-            selected={selected}
-          />
+          <Project key={project.id} project={project} selected={selected} />
         ))}
       </div>
     </div>

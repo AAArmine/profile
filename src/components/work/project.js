@@ -1,26 +1,23 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Modal } from 'antd';
-import { openSrc } from '../../constants';
-import AnimatedLetters from '../custom/animatedLetters';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import './index.scss';
 
 const Project = ({ selected, project }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [letterClass, setLetterClass] = useState('text-animate');
-  const openSrcArr = openSrc.split('');
+
   const showModal = () => {
     setIsModalOpen(true);
   };
   const handleCancel = () => {
     setIsModalOpen(false);
   };
-  useEffect(() => {
-    setTimeout(() => {
-      setLetterClass('text-animate-hover');
-    }, 2000);
-  }, []);
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setLetterClass('text-animate-hover');
+  //   }, 2000);
+  // }, []);
   return (
     <div className={`project ${selected === project.id ? 'flip' : ''}`}>
       <div className="content">
@@ -37,7 +34,6 @@ const Project = ({ selected, project }) => {
       </div>
       <Modal
         open={isModalOpen}
-        // onOk={handleOk}
         onCancel={handleCancel}
         footer={null}
         title={null}
@@ -55,14 +51,43 @@ const Project = ({ selected, project }) => {
             <FontAwesomeIcon icon={faArrowRight} />
           </span>
         </a>
-        <div id="my-video-container">
-          <iframe
-            width="600"
-            height="338"
-            src={project.video}
-            frameborder="0"
-            title="My Video"
-          ></iframe>
+        <div id="video-container">
+          {project.link ? (
+            <>
+              <iframe
+                width="600"
+                height="338"
+                src={project.video}
+                style={{ border: 'none' }}
+                title="My Video"
+              ></iframe>
+
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noreferrer"
+                style={{
+                  position: 'absolute',
+                  top: '0',
+                  left: '0',
+                  display: 'inlineBlock',
+                  width: '500px',
+                  height: '280px',
+                  zIndex: '5',
+                }}
+              >
+                {' '}
+              </a>
+            </>
+          ) : (
+            <iframe
+              width="600"
+              height="338"
+              src={project.video}
+              style={{ border: 'none' }}
+              title="My Video"
+            ></iframe>
+          )}
         </div>
       </Modal>
     </div>

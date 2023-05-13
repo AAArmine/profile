@@ -7,4 +7,7 @@ export const contactText =
   " I am enthusiastic about taking on challenging and captivating freelance projects, as well as exploring opportunities as a full-time employee. If you have any inquiries, please don't hesitate to contact me. ";
 export const workTitleTop = 'My Recent Projects';
 export const workTitleBottom = 'Some Of My Early Projects';
-export const openSrc="Open source code"
+export const openSrc = 'Open source code';
+export const introduction = 'Armine Aghababyan * Front-End-Developer * ';
+export const myName = "I'm Armine";
+export const job = 'Front-End-Developer';

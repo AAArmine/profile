@@ -1,8 +1,8 @@
 import './index.scss';
+import { introduction } from '../../constants';
 
 const PageOpenAnimation = () => {
-  const text = 'Armine Aghababyan * Front-End-Developer * ';
-  const textArray = text.split('');
+  const textArray = introduction.split('');
   return (
     <div className="circle-cont">
       <div className="circle">
@@ -11,6 +11,7 @@ const PageOpenAnimation = () => {
             <p>
               {textArray.map((letter, i) => (
                 <span
+                  key={`${i} ${letter}`}
                   style={{
                     transform: `rotate(${i * 8.6}deg)`,
                     ...(i < 7 && {

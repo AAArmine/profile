@@ -1,35 +1,15 @@
 import { useState, useEffect } from 'react';
-import gifAnimation from '../../assets/images/pic.gif';
+import gifAnimation from 'assets/images/pic.gif';
 import AnimatedLetters from '../custom/animatedLetters';
 import { Link } from 'react-router-dom';
+import { myName, job } from 'constants';
 import './index.scss';
 
 const About = () => {
   const [letterClass, setLetterClass] = useState('text-animate');
-  const nameArray = ["I'", 'm', ' ', 'A', 'r', 'm', 'i', 'n', 'e'];
+  const nameArray = myName.split('');
   const jobDescArray = ['React JS, Web Developer'];
-  const jobArray = [
-    'F',
-    'r',
-    'o',
-    'n',
-    't',
-    '-',
-    'E',
-    'n',
-    'd',
-    ' ',
-    'D',
-    'e',
-    'v',
-    'e',
-    'l',
-    'o',
-    'p',
-    'e',
-    'r',
-  ];
-
+  const jobArray = job.split('');
   const hi = ['Hi,'];
   useEffect(() => {
     setTimeout(() => {
@@ -45,7 +25,6 @@ const About = () => {
             <AnimatedLetters letterClass={letterClass} strArray={hi} idx={17} />
           </span>
           <br />
-
           <AnimatedLetters
             letterClass={letterClass}
             strArray={nameArray}
@@ -62,7 +41,6 @@ const About = () => {
         <p>
           <span className="left-p">
             <span className="page-tags">&lt;p&gt;</span>
-            {/* React JS, Web Developer */}
             <AnimatedLetters
               letterClass={letterClass}
               strArray={jobDescArray}

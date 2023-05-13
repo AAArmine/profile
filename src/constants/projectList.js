@@ -5,7 +5,7 @@ import sevaberdLogo from '../assets/images/sevaberd.png';
 import cyberTechLogo from '../assets/images/cyberTech.png';
 import armheroLogo from '../assets/images/armhero.png';
 import addataLogo from '../assets/images/addata.svg';
-
+import yooremitLogo from '../assets/images/yooremit.svg';
 import finextVideo from '../assets/videos/finext.mp4';
 import belotVideo from '../assets/videos/belot.mp4';
 import gniwVideo from '../assets/videos/gniw.mp4';
@@ -13,12 +13,13 @@ import sevaberdVideo from '../assets/videos/sevaberd.mp4';
 import cyberTechVideo from '../assets/videos/cyberTech.mp4';
 import armheroVideo from '../assets/videos/armhero.mp4';
 import addataVideo from '../assets/videos/addata.mp4';
+import yooremitVideo from '../assets/videos/yooremit.mp4';
 
 export const projectList = [
   {
     id: 1,
     logo: finextLogo,
-    src: 'https://github.com/AAArmine/finext',
+    src: 'https://github.com/AAArmine/finext-global',
     technologies:
       'React JS, Typescript, React Redux Toolkit, Tailwind CSS, Ant Design, React Form Hook, npm, Axios',
     video: finextVideo,
@@ -26,16 +27,16 @@ export const projectList = [
   },
   {
     id: 2,
-    logo: finextLogo,
-    src: 'https://github.com/AAArmine/finext',
+    logo: yooremitLogo,
+    src: 'https://github.com/AAArmine/yooRemitAdminPanel',
     technologies: 'React JS, Typescript, React Redux Toolkit, Ant Design',
-    video: finextVideo,
+    video: yooremitVideo,
     link: false,
   },
   {
     id: 3,
     logo: gniwLogo,
-    src: 'https://github.com/AAArmine/lpg',
+    src: 'https://github.com/AAArmine/lpg/tree/main/src/templates/SaleWithResidence',
     technologies: 'React JS, Typescript, Next.js, Ant Design, Tailwind CSS',
     video: gniwVideo,
     link: 'https://gniw.de/hausverkauf-mit-wohnrecht/',
@@ -46,7 +47,7 @@ export const projectList = [
     src: 'https://github.com/AAArmine/fr-belot-admin/',
     technologies: 'React JS, Typescript, Ant Design, Axios',
     video: belotVideo,
-    link: false,
+    link: 'https://play.google.com/store/apps/details?id=com.beloteplus.candywings&hl=en&gl=US',
   },
   {
     id: 5,

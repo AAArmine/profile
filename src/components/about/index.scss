@@ -13,7 +13,6 @@
   .content {
     h1 {
       margin-top: 0;
-      cursor: pointer;
     }
     .left,
     .left-p {
@@ -31,20 +30,20 @@
     }
     .right {
       position: relative;
-      // left: -50px;
     }
     p {
       color: $contrast;
       font-weight: 300;
       font-family: 'Coolvetica';
       letter-spacing: 2px;
-      cursor: pointer;
+      a {
+        color: $contrast;
+      }
     }
   }
   .image {
     width: 210px;
     height: 260px;
-    // border-radius: 20px;
     border: 1px solid $alternative;
     margin-top: 50px;
     margin-left: 50px;
@@ -78,7 +77,6 @@
       img {
         width: 210px;
         height: 260px;
-        // border-radius: 20px;
         filter: opacity(0.5);
         &:hover {
           filter: opacity(1);

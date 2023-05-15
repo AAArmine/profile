@@ -54,7 +54,6 @@
     top: 50%;
     bottom: 50%;
     transform: translate(0%, -50%);
-    // margin-left: 50px;
     .cube-spinner {
       animation-name: spinCube;
       animation-timing-function: ease-in-out;
@@ -63,7 +62,6 @@
       transform-style: preserve-3d;
       transform-origin: 100px 100px 0;
       margin-left: calc(50% - 100px);
-
       div {
         position: absolute;
         width: 200px;

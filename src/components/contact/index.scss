@@ -2,7 +2,6 @@
 .contact-container {
   display: flex;
   justify-content: space-between;
-  // align-items: center;
   width: 100%;
   font-family: 'Coolvetica';
   h1 {
@@ -131,19 +130,16 @@
       width: 220px;
       padding: 14px;
       font-size: 14px;
-      // font-family: 'Courier New', Courier, monospace;
       letter-spacing: 1px;
       animation: fadeIn ease-in;
       animation-fill-mode: forwards;
       animation-duration: 1s;
       font-weight: 300;
-      // transition: all 1s ease-in-out;
       span {
         font-size: 12px;
         display: block;
         padding-top: 10px;
         font-weight: 900;
-        // color: $contrast;
       }
     }
     .map-wrap {
@@ -154,7 +150,6 @@
       opacity: 0;
       animation: backInRight 1s 1.2s;
       animation-fill-mode: forwards;
-      // filter: brightness(120%) hue-rotate(-80deg);
       &:hover {
         filter: unset;
         background-color: transparent;

@@ -13,11 +13,7 @@ const Project = ({ selected, project }) => {
   const handleCancel = () => {
     setIsModalOpen(false);
   };
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     setLetterClass('text-animate-hover');
-  //   }, 2000);
-  // }, []);
+
   return (
     <div className={`project ${selected === project.id ? 'flip' : ''}`}>
       <div className="content">
@@ -60,6 +56,8 @@ const Project = ({ selected, project }) => {
                 src={project.video}
                 style={{ border: 'none' }}
                 title="My Video"
+                autoplay
+                loop
               ></iframe>
 
               <a
@@ -86,6 +84,8 @@ const Project = ({ selected, project }) => {
               src={project.video}
               style={{ border: 'none' }}
               title="My Video"
+              autoplay
+              loop
             ></iframe>
           )}
         </div>

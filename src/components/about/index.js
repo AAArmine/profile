@@ -41,11 +41,13 @@ const About = () => {
         <p>
           <span className="left-p">
             <span className="page-tags">&lt;p&gt;</span>
-            <AnimatedLetters
-              letterClass={letterClass}
-              strArray={jobDescArray}
-              idx={11}
-            />
+            <Link to="/skills">
+              <AnimatedLetters
+                letterClass={letterClass}
+                strArray={jobDescArray}
+                idx={11}
+              />
+            </Link>
             <span className="page-tags">&lt;p/&gt;</span>
           </span>
         </p>

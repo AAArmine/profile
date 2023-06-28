@@ -8,6 +8,7 @@ import Contact from './components/contact';
 import PageOpenAnimation from './components/pageOpenAnimation';
 import 'antd/dist/reset.css';
 import './App.scss';
+import Test from 'components/test';
 
 function App() {
   const [showAnimation, setShowAnimation] = useState(true);
@@ -20,7 +21,6 @@ function App() {
       clearTimeout(timeoutId);
     };
   }, [showAnimation]);
-
   return (
     <Routes>
       {showAnimation ? (
@@ -37,6 +37,9 @@ function App() {
       <Route path="/" element={<Layout largeContent />}>
         <Route path="/work" element={<Work />} />
       </Route>
+    {/* delete */}
+
+      <Route path="/test" element={<Test />} />
     </Routes>
   );
 }
